@@ -10,6 +10,6 @@
     ],
     "require": {
         "mark-php/mark": "^1.1",
-        "analogue/orm": "^6.2"
+        "nette/database": "^3.0"
     }
 }
