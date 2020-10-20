@@ -1,11 +1,8 @@
 <?php
 
-class Topic
+namespace MyBBApi\Models;
+
+class Topic extends Model
 {
-	
-	function __construct( $args ) {
-		foreach ($args as $key => $value) {
-			$this->{$key} = $value;
-		}
-	}
+
 }
