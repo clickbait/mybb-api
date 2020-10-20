@@ -1,26 +1,21 @@
 <?php
 use Mark\App;
 
+include 'includes/config.php';
+include 'includes/util.php';
+include 'includes/controllers.php';
+
 require 'vendor/autoload.php';
 
-$db = new Nette\Database\Connection('mysql:host=127.0.0.1;dbname=eroticat', 'root', '');
+$db = new Nette\Database\Connection(
+	$conf['db']['dsn'],
+	$conf['db']['username'],
+	$conf['db']['password']
+);
 
 $api = new App('http://0.0.0.0:6969');
 $api->count = 4; // process count
 
-$api->any('/', function ($requst) use ( $db ) {
-    $result = $db->query('SELECT * FROM pomf_users');
-    $count = $result->getRowCount();
-
-    return "There are {$count} users in the database.";
-});
-
-$api->get('/hello/{name}', function ($requst, $name) {
-    return "Hello $name";
-});
-
-$api->post('/user/create', function ($requst) {
-    return json_encode(['code'=>0 ,'message' => 'ok']);
-});
+include 'includes/routes.php';
 
 $api->start();
