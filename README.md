@@ -5,4 +5,4 @@ WIP drop in restful API for a MyBB database.
 `composer install`
 
 ## run it
-`php start.php start -d`
+`php server.php start -d`
