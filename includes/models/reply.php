@@ -1,11 +1,8 @@
 <?php
 
-class Reply
+namespace MyBBApi\Models;
+
+class Reply extends Model
 {
 	
-	function __construct( $args ) {
-		foreach ($args as $key => $value) {
-			$this->{$key} = $value;
-		}
-	}
 }

@@ -1,11 +1,8 @@
 <?php
 
-class Category
+namespace MyBBApi\Models;
+
+class Category extends Model
 {
-	
-	function __construct( $args ) {
-		foreach ($args as $key => $value) {
-			$this->{$key} = $value;
-		}
-	}
+
 }

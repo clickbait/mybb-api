@@ -1,11 +1,8 @@
 <?php
 
-class Member
+namespace MyBBApi\Models;
+
+class Member extends Model
 {
 	
-	function __construct( $args ) {
-		foreach ($args as $key => $value) {
-			$this->{$key} = $value;
-		}
-	}
 }
