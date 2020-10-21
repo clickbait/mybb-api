@@ -3,7 +3,7 @@
     - [ ] pagination
     - [ ] ordering
     - [ ] search
-  - [ ] single
+  - [x] single
   - [ ] create
   - [ ] update
   - [ ] delete
