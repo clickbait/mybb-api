@@ -1,5 +1,5 @@
 - [ ] members
-  - [ ] list
+  - [x] list
     - [ ] pagination
     - [ ] ordering
     - [ ] search
@@ -15,7 +15,7 @@
   - [ ] update
   - [ ] delete
 - [ ] categories
-  - [ ] list
+  - [x] list
   - [ ] topics
     - [ ] pagination
     - [ ] ordering
