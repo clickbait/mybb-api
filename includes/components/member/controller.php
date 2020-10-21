@@ -1,5 +1,9 @@
 <?php
 
+namespace MyBBApi\Controllers;
+
+use MyBBApi\Utility\Util;
+
 class MemberController extends Controller
 {
 	public static function GetMemberList() {

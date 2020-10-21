@@ -1,10 +1,7 @@
 <?php
 
-// include 'functions/example.php';
+namespace MyBBApi\Utility;
 
-/**
- * 
- */
 class Util
 {
 	
