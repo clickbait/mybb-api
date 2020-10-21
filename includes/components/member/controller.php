@@ -16,13 +16,13 @@ class MemberController extends Controller
 			$users[] = (new Member($row))->PublicFacingData();
 		endforeach;
 
-		return json_encode( $users );
+		return Util::JsonResponse( $users );
 	}
 
 	public static function GetMemberBySlug( $slug ) {
 		$member = Util::db()->fetch( 'SELECT * FROM pomf_users WHERE slug = ?', $slug );
 		$member = new Member( $member );
 
-		return json_encode( $member->PublicFacingData() );
+		return Util::JsonResponse( $member->PublicFacingData() );
 	}
 }

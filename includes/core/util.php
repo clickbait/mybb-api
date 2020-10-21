@@ -11,4 +11,10 @@ class Util
 
 		return $db;
 	}
+
+	public static function JsonResponse( $data ) {
+		header( 'Content-Type: application/json' );
+
+		return json_encode( $data );
+	}
 }
