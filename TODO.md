@@ -1,0 +1,22 @@
+- [ ] members
+  - [ ] list
+    - [ ] pagination
+    - [ ] ordering
+    - [ ] search
+  - [ ] single
+  - [ ] create
+  - [ ] update
+  - [ ] delete
+- [ ] topics
+  - [ ] single
+    - [ ] replies
+      - [ ] pagination
+  - [ ] create
+  - [ ] update
+  - [ ] delete
+- [ ] categories
+  - [ ] list
+  - [ ] topics
+    - [ ] pagination
+    - [ ] ordering
+    - [ ] search
