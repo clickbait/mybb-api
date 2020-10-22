@@ -26,4 +26,10 @@ class Category extends Model
 
 		return $data;
 	}
+
+	function GetTopics() {
+		return array_map( function( $row ) {
+			return new Topic( $row );
+		}, Util::db()->fetchAll( 'SELECT * FROM pomf_threads WHERE fid = ? ORDER BY lastpost DESC LIMIT 50', $this->fid ) );
+	}
 }

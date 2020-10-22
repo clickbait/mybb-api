@@ -23,7 +23,20 @@ class CategoryController extends Controller
 		$category = Util::db()->fetch( 'SELECT * FROM pomf_forums WHERE slug = ?', $slug );
 		$category = new Category( $category );
 
+		$topics = $category->GetTopics();
 
-		return Util::JsonResponse( $category->PublicFacingData() );
+		$data = new \stdClass;
+
+		$data->category = $category->PublicFacingData();
+
+		if ( count( $topics ) ):
+			$data->topics = array();
+
+			foreach ( $topics as $topic ):
+				$data->topics[] = $topic->PublicFacingData();
+			endforeach;
+		endif;
+
+		return Util::JsonResponse( $data );
 	}
 }
